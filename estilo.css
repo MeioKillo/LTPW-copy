@@ -1,7 +1,7 @@
 /* CSS   reset */
 *, *::before, *:after {
-    margin: 0;
-    padding: 0;
+    margin: 5;
+    padding: 5;
     font-family: Arial, sans-serif;
 }
 
@@ -14,6 +14,17 @@ a{
 a.links{
     display: nome;
 }
+body {
+    background-image: url('Images/background.jpg'); /* Caminho da sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir a área inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-attachment: fixed; /* Faz com que a imagem de fundo não se mova ao rolar */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 
 .content{
     width: 500px;
@@ -24,7 +35,7 @@ a.links{
 
 h1{
     font-size: 48px;
-    color: #066a75;
+    color: #b85005;
     padding: 2px 0 10px 0;
     font-family: Arial,sans-serif;
     font-weight: bold;
@@ -91,7 +102,7 @@ input:not([type="checkbox"]){
 input[type="submit"]{
     width: 100%!important;
     cursor: pointer;
-    background: rgb(61, 157,179);
+    background: rgba(151, 54, 6, 0.752);
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;
@@ -107,7 +118,7 @@ input[type="submit"]{
 
 /*estilo do botão submit no hover*/
 input[type="submit"]:hover{
-    background: #4ab3c6;
+    background: #c37a04;
 }
 
 .link{
@@ -147,14 +158,14 @@ input[type="submit"]:hover{
 #cadastro,
 #login{
     position: absolute;
-    top: 0px;
+    top: 15px;
     width: 88%;
-    padding: 18px 6% 60px 6%;
+    padding: 18px 6% 76px 6%;
     margin: 0 0 35px 0;
     background: #f7f7f7;
-    border: 1px solid rgba( 147, 184, 189, 0.8);
+    border: 3px solid rgba( 147, 184, 189, 0.8);
 
-    -webkit-box-shadow: 5px;
+    box-shadow: 5px;
     border-radius: 5px;
 
     -webkit-animation-duration: 0.5s;
@@ -169,6 +180,7 @@ input[type="submit"]:hover{
     animation-timing-function: ease;
     animation-fill-mode: both
 }
+
 /*Efeito ao clicar no botão(Ir para Login) */
 #paracadastro:target ~ .content #cadastro,
 #paralogin:target ~ .content #login{
@@ -176,7 +188,7 @@ input[type="submit"]:hover{
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInleft;
 
-    -webkit-animation: 1s;
+    animation: 1s;
     animation-delay: 1s;
 }
 
@@ -209,7 +221,7 @@ input[type="submit"]:hover{
     }
 }
 /*fadeOutLeft*/
-@-webkit-keyframes fadeOutLeft{
+@keyframes fadeOutLeft{
     0%{
         opacity: 1;
         -webkit-transform: translate(0);
